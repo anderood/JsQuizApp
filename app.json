@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "name": "jsQuizApp",
+    "slug": "jsQuizApp",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
