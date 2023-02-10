@@ -1,14 +1,12 @@
 import React from "react";
 
-import { Image, Text } from 'react-native';
-
-import { Container, ContainerImage, Title, Description, ContainerButton, Button } from './styles';
+import { Container, ContainerImage, Image, Title, Description, ContainerButton, Button, TextButton } from './styles';
 
 export function Card(){
     return(
         <Container>
             <ContainerImage>
-                {/* <Image source={require('../../images/back-code.jpg')}/> */}
+                <Image source={require('../../images/back-code.jpg')}/>
             </ContainerImage>
             <Title>Beginner</Title>
             <Description>
@@ -16,7 +14,7 @@ export function Card(){
             </Description>
             <ContainerButton>
                 <Button>
-                    <Text>START</Text>
+                    <TextButton>START</TextButton>
                 </Button>
             </ContainerButton>
         </Container>

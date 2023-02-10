@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Container, Title } from "../Dashboard/styles"
+import { Container } from "../Dashboard/styles"
 
 import { Card } from "../../components/Card"
 
