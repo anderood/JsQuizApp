@@ -14,6 +14,7 @@ import {
 } from '@expo-google-fonts/poppins'
 
 import { Dashboard } from './src/pages/Dashboard';
+import { Home } from './src/pages/Home';
 
 export default function App() {
   
@@ -34,7 +35,7 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <NavigationContainer>
         <Stack.Navigator>
-          <Stack.Screen name='JSQUIZ' component={Dashboard} />
+          <Stack.Screen name='JSQUIZ' component={Home} />
         </Stack.Navigator>
       </NavigationContainer>
     </ThemeProvider>

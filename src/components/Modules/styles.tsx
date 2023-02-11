@@ -4,9 +4,9 @@ export const Container = styled.View`
     /* margin: 10px 10px; */
     background: #fff ;
    height: 120px;
-   width: 95%;
+   width: 45%;
    border: 1px solid #c3c3c3;
-   margin-top: 10px;
+   margin: 5px 5px;
    border-radius: 10px;
    padding: 10px 10px;
    
