@@ -1,10 +1,10 @@
 import styled from "styled-components/native";
 
 export const Container = styled.View`
-    margin: 10px 10px;
+    /* margin: 10px 10px; */
     background: #fff ;
    height: 120px;
-   width: 45%;
+   width: 95%;
    border: 1px solid #c3c3c3;
    margin-top: 10px;
    border-radius: 10px;
