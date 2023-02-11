@@ -6,7 +6,10 @@ export const Container = styled.View`
     /* background-color: black; */
     flex: 1;
     /* padding: 16px 16px; */
-    align-items: center;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
 `;
 
 export const Title = styled.Text`
