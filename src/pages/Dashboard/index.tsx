@@ -8,12 +8,7 @@ export function Dashboard(){
         <Container>
             <Modules />
             <Modules />
-            <Modules />
-            <Modules />
-            <Modules />
-            <Modules />
-            <Modules />
-            <Modules />
+            
         </Container>
     );
 }
