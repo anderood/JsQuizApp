@@ -1,19 +1,24 @@
 import React from "react";
-import { Modules } from "../../components/Modules";
 
 import { Container } from "../Home/styles";
 
-export function Home(){
+import { Card } from "../../components/Card";
+import { NavigationProp } from "@react-navigation/native";
+const logo = require('../../images/back-code.jpg');
+
+interface HomeProps{
+    navigation: NavigationProp<any>
+}
+
+export function Home({ navigation }: HomeProps ){
     return(
         <Container>
-            <Modules />
-            <Modules />
-            <Modules />
-            <Modules />
-            <Modules />
-            <Modules />
-            <Modules />
-            <Modules />
+            <Card 
+                imgsource={logo}
+                title="Iniciante"
+                description="For JavaScript developers who is just stating learning the language, or has only recently started."
+                onPress={ ()=> navigation.navigate('Home')}
+                />
         </Container>
-    );
+    )
 }

@@ -13,8 +13,8 @@ import {
 
 } from '@expo-google-fonts/poppins'
 
-import { Dashboard } from './src/pages/Dashboard';
 import { Home } from './src/pages/Home';
+import { Dashboard } from './src/pages/Dashboard';
 
 
 export default function App() {
@@ -36,8 +36,8 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <NavigationContainer>
         <Stack.Navigator initialRouteName='Dashboard'>
-          <Stack.Screen name='JSQUIZ' component={Dashboard} />
-          <Stack.Screen name='Home' component={Home} />
+          <Stack.Screen name='JSQUIZ' component={Home} />
+          <Stack.Screen name='Home' component={Dashboard} />
         </Stack.Navigator>
       </NavigationContainer>
     </ThemeProvider>
