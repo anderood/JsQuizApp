@@ -2,18 +2,25 @@ import React from "react";
 
 import { Container, ContainerImage, Image, Title, Description, ContainerButton, Button, TextButton } from './styles';
 
-export function Card(){
+type ImageSourcePropType = React.ComponentProps<typeof Image>['source'];
+interface CardProps{
+    imgsource: ImageSourcePropType;
+    title: string;
+    description: string;
+    onPress: ()=>void;
+}
+
+
+export function Card({ imgsource, title, description, onPress }: CardProps){
     return(
         <Container>
             <ContainerImage>
-                <Image source={require('../../images/back-code.jpg')}/>
+                <Image source={imgsource}/>
             </ContainerImage>
-            <Title>Beginner</Title>
-            <Description>
-                For JavaScript developers who is just stating learning the language, or has only recently started.
-            </Description>
+            <Title>{title}</Title>
+            <Description>{description}</Description>
             <ContainerButton>
-                <Button>
+                <Button onPress={onPress}>
                     <TextButton>START</TextButton>
                 </Button>
             </ContainerButton>

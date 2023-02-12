@@ -15,8 +15,7 @@ import {
 
 import { Dashboard } from './src/pages/Dashboard';
 import { Home } from './src/pages/Home';
-import { ViewQuiz } from './src/pages/ViewQuiz';
-import { ViewResult } from './src/pages/ViewResult';
+
 
 export default function App() {
   
@@ -36,8 +35,9 @@ export default function App() {
     
     <ThemeProvider theme={theme}>
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name='JSQUIZ' component={ViewResult} />
+        <Stack.Navigator initialRouteName='Dashboard'>
+          <Stack.Screen name='JSQUIZ' component={Dashboard} />
+          <Stack.Screen name='Home' component={Home} />
         </Stack.Navigator>
       </NavigationContainer>
     </ThemeProvider>
