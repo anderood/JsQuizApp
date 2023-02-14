@@ -1,4 +1,5 @@
 import React from "react";
+import { ScrollView } from "react-native";
 
 import { 
     Container, 
@@ -14,58 +15,50 @@ import {
     DescriptionResponse 
 } from "../Question/styles";
 
-export function Question(){
-    return(
-        <Container>
-            <ContainerTitle>
-                <Position>1 / 8</Position>
-                <Title>Qual é o valor do result?</Title>
-            </ContainerTitle>
-            <ContainerFrame>
-                <Description >
-                    {`
-                import React from 'react';
-                import { View, Text } from 'react-native';
-                
-                const MyComponent = () => {
-                    return (
-                    <View>
-                        <Text>Hello, World!</Text>
-                    </View>
-                    );
-                };
-                
-                export default MyComponent;
-                    `}
-                </Description>
-            </ContainerFrame>
-            <ContainerOptions>
-                <ButtonOption>
-                    <TextOption>throw a SyntaxError</TextOption>
-                </ButtonOption>
-                <ButtonOption>
-                    <TextOption>undefined</TextOption>
-                </ButtonOption>
-                <ButtonOption>
-                    <TextOption>Brendan</TextOption>
-                </ButtonOption>
-                <ButtonOption>
-                    <TextOption>throw a ReferenceError</TextOption>
-                </ButtonOption>
-            </ContainerOptions>
-            <ContainerResponse>
-                <DescriptionResponse>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Cum eligendi dolor velit nobis minima ea soluta, corporis 
-                    facere recusandae voluptatum quam, ex eveniet est unde. 
-                    Ex est molestias sunt laborum!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                    Cum eligendi dolor velit nobis minima ea soluta, corporis 
-                    facere recusandae voluptatum quam, ex eveniet est unde. 
-                    Ex est molestias sunt laborum!
-                </DescriptionResponse>
-            </ContainerResponse>
+interface QuestionProps{
+    position: number;
+    title: string;
+    textCode: string;
+    textOption: string[];
+    textExplanation: string;
+}
 
-        </Container>
+export function Question({
+    position,
+    title,
+    textCode,
+    textOption,
+    textExplanation,
+} : QuestionProps ){
+    return(
+
+        <ScrollView>
+            
+            <Container>
+                <ContainerTitle>
+                    <Position>{ position +` / 8` }</Position>
+                    <Title> {title} </Title>
+                </ContainerTitle>
+                <ContainerFrame>
+                    <Description>{textCode}</Description>
+                </ContainerFrame>
+                <ContainerOptions>
+
+                    {
+                        textOption.map((item, idx) => (
+
+                            <ButtonOption key={idx}>
+                                <TextOption>{item}</TextOption>
+                            </ButtonOption>
+                        ))
+                    }
+                    
+                </ContainerOptions>
+                <ContainerResponse>
+                    <DescriptionResponse>{textExplanation}</DescriptionResponse>
+                </ContainerResponse>
+
+            </Container>
+        </ScrollView>
     );
 }

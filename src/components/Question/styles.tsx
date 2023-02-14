@@ -30,7 +30,7 @@ export const Title = styled.Text`
 `
 
 export const ContainerFrame = styled.View`
-    /* height: 200px; */
+    height: 120px;
     /* border: 2px solid blue; */
     background: #30333f;
     /* padding: 10px 10px; */
@@ -39,7 +39,8 @@ export const ContainerFrame = styled.View`
 `
 
 export const Description = styled.Text`
-    /* font-family: ${({ theme }) => theme.fonts.regular }; */
+    font-family: ${({ theme }) => theme.fonts.regular };
+    padding: 18px 18px;
     color: #fff;
 `
 
@@ -61,16 +62,17 @@ export const TextOption = styled.Text`
 `
 
 export const ContainerResponse = styled.View`
-    padding: 16px 16px;
-    height: 200px;
+    height: 250px;
     background: #dcf4da;
     justify-content: center;
-    align-items: center;
+    /* align-content: center; */
     border: 1px solid #ccc
 `
 
 export const DescriptionResponse = styled.Text`
     font-family: ${({ theme }) => theme.fonts.bold };
     color: #2f7e37;
+    padding: 16px 16px;
+
 `
 
